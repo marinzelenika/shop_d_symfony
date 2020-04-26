@@ -1,0 +1,37 @@
+easy_admin:
+    entities:
+      Product:
+        class: App\Entity\Product
+        label: 'Artikli'
+        form:
+                fields:
+                    - { type: 'group',icon: 'clip', label: 'Attachments', css_class: 'col-lg-5' }
+                    - { property: 'imageFile', type: 'vich_image' }
+                    - name
+                    - price
+                    - oldprice
+                    - description
+                    - category
+
+        show:
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%uploads_path%'}
+
+        list:
+                fields: [{property: 'image', type: 'image', base_path: '%uploads_path%'}, 'name', 'price', 'oldprice', 'description', 'category']
+       
+     
+      Category:
+        class: App\Entity\Category
+        label: 'Kategorije'
+      User:
+        class: App\Entity\User
+        label: 'Korisnici'
+
+
+      
+          
+      
+           
+            
+

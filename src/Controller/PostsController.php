@@ -12,11 +12,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
     class PostsController extends AbstractController {
         /**
-         * @Route("/")
+         * @Route("/posts", name="naslovna1")
          * @Method({"GET"})
          */
         public function index() {
-           // return new Response('<html>Hello</html>');
+           
 
            return $this->render('posts/index.html.twig');
         }

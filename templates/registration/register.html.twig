@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+
+
+{% block body %}
+<div class="container">
+    <h1 class="mt-5 mb-3">Molimo registrirajte se</h1>
+
+    <div class="form-group">
+    {{ form_start(registrationForm) }}
+       {{ form_row(registrationForm.username)  }}
+        {{ form_row(registrationForm.email) }}   
+       {{ form_row(registrationForm.plainPassword) }}  
+        {{ form_row(registrationForm.agreeTerms) }}   
+        
+        <button class="btn btn-outline-primary mt-4">Potvrdi</button>
+    {{ form_end(registrationForm) }}
+    </div>
+    </div>
+    
+{% endblock %}
+
+
+{% block stylesheets %}
+<link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+
+
+{% endblock %}
