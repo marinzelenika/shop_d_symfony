@@ -25,16 +25,7 @@
       <img src="uploads/images/logodujkic4.jpg" /></a>
 
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-     {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %} <a class="nav-link" href="{{path('app_login')}}">Prijavi se</a>{% endif %}
-      <li class="nav-item">
-     {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %} <a class="nav-link" href="{{path('app_register')}}">Registriraj se</a>{% endif %}
-      </li>
-      
-      <li class="nav-item">
-     {% if is_granted('IS_AUTHENTICATED_FULLY') %}<a class="nav-link" href="{{path('app_logout')}}">Odjavi se</a>{% endif %}
-      </li>
-      </li>
+
       </ul>
     </form>
   </div>

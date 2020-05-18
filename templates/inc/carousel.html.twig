@@ -1,0 +1,97 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+{% endblock %}
+
+{% block body %}
+
+
+<div class="brands">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="brands_slider_container">
+                    <div class="owl-carousel owl-theme brands_slider">
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/philips.png') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/beko.png') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/lg_logo.jpg') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/alfaplam.png') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/kolpasan.png') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/gorenje.gif') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/zanussi.png') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/bosch.jpg') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/samsung.png') }}" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center"><img src="{{ asset('uploads/images/vox.png') }}" alt="" class="img-fluid"></div>
+                        </div>
+                    </div> <!-- Brands Slider Navigation -->
+                    <div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{%  block javascripts %}
+    <script>
+    $(document).ready(function(){
+
+    if($('.brands_slider').length)
+    {
+    var brandsSlider = $('.brands_slider');
+
+    brandsSlider.owlCarousel(
+    {
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:2000,
+    nav:false,
+    dots:false,
+    autoWidth:true,
+    items:8,
+    margin:42
+    });
+
+    if($('.brands_prev').length)
+    {
+    var prev = $('.brands_prev');
+    prev.on('click', function()
+    {
+    brandsSlider.trigger('prev.owl.carousel');
+    });
+    }
+
+    if($('.brands_next').length)
+    {
+    var next = $('.brands_next');
+    next.on('click', function()
+    {
+    brandsSlider.trigger('next.owl.carousel');
+    });
+    }
+    }
+
+
+    });
+    </script>
+{% endblock %}

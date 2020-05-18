@@ -1,0 +1,57 @@
+
+
+
+{% block body %}
+<!-- Site footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>O nama</h6>
+                <p class="text-justify">Poduzeće DUJKIĆ d.o.o. je svoje poslovanje započelo davne 1997 godine kao mali obiteljski obrt za trgovanje bijelom tehnikom na cca. 80m2 izložbenog prostora. Kroz sve godine poslovanja smo (uz velika odricanja i naporni rad) stalno usavršavali svoje poslovne aktivnosti uz konstantno praćenje trendova i potreba naših maloprodajnih kupaca koji i čine okosnicu našeg poslovanja.
+
+                    Danas firma posluje na 800m2 izložbeno-prodajnog salona i 500m2 skladišnog prostora te u svojoj ponudi nudimo (pored bijele tehnike) najveći izbor sanitarija, keramike, vodoinstalacija i elektroinstalacija.
+                    Također, svoje poslovanje smo proširili i na veleprodaju kroz poslovnu suradnju sa svim većim firmama u BiH koje se bave ovim vrstama roba. Ime DUJKIĆ je postalo sinonim za pažljiv i korektan odnos prema kupcima, našim zaposlenicima kao i cjelokupnoj društvenoj zajednici, te smo kroz brojna sponzorstva i donacije financirali mnogobrojna sportska, kulturna i humanitarna događanja.
+
+                    Naša misija je da kupcima pružimo najveći izbor roba uz najpovoljnije cijene i najbolju uslugu kako bi svakom kupnjom stekli lojalnost kupaca koja nam garantira ispunjavanje njihovih potreba i u budućnosti.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Kategorije</h6>
+                <ul class="footer-links">
+                    {% for category in categories %}
+                    <li><a href="{{ path('findbycat', {'categoryId': category.id}) }}">{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Kontakt</h6>
+                <ul class="footer-links">
+                    <li><i class="fas fa-phone"> +387 39 705 506</i></li>
+                    <li><i class="fas fa-envelope"> info@dujkic.com</i></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                    <a href="#">Dujkic d.o.o</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
